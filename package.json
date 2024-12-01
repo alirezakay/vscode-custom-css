@@ -1,5 +1,5 @@
 {
-	"name": "vscode-custom-css",
+	"name": "vscode-custom-css-silent",
 	"displayName": "Custom CSS and JS Loader (Silent)",
 	"description": "Custom CSS and JS for Visual Studio Code (Silent)",
 	"version": "7.4.0",

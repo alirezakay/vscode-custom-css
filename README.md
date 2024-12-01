@@ -1,6 +1,6 @@
 # FORKED EXTENSION !
 
-> (the base is provided by the good pal `be5invis` in this repo: [vscode-custom-css](https://raw.githubusercontent.com/be5invis/vscode-custom-css))
+> (the base is provided by the good pal `be5invis` in this repo: [vscode-custom-css](https://github.com/be5invis/vscode-custom-css))
 
 > I've customized it for using in my own extension: `rtltextdocuments`
 

@@ -47,7 +47,7 @@ function activate(context) {
 			// regex matches any "${<RESOLVE>}" and replaces with resolveVariable(<RESOLVE>)
 			// eg:  "HELLO ${userHome} WORLD" -> "HELLO /home/username WORLD"
 			const resolved = url.replaceAll(/\$\{([^\{\}]+)\}/g, (substr, key) => resolveVariable(key) ?? substr);
-			return Url.fileURLToPath(resolved);
+			return resolved;
 		} else {
 			return url
 		}
@@ -55,7 +55,8 @@ function activate(context) {
 
 	async function getContent(url) {
 		if (/^file:/.test(url.toString())) {
-			return await fs.promises.readFile(url);
+			const p = Url.fileURLToPath(url);
+			return fs.readFileSync(p);
 		} else {
 			const response = await fetch(url);
 			return response.buffer();
@@ -264,8 +265,8 @@ function activate(context) {
 		cmdReinstall
 	);
 
-	context.subscriptions.push(installCustomCSS);
-	context.subscriptions.push(uninstallCustomCSS);
+	// context.subscriptions.push(installCustomCSS);
+	// context.subscriptions.push(uninstallCustomCSS);
 	context.subscriptions.push(updateCustomCSS);
 
 	console.log("vscode-custom-css-silent is active!");
