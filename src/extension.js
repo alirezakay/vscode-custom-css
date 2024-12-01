@@ -232,35 +232,35 @@ function activate(context) {
 		vscode.commands.executeCommand("workbench.action.reloadWindow");
 	}
 	function enabledRestart() {
-		vscode.window
-			.showInformationMessage(msg.enabled, msg.restartIde)
-			.then((btn) => {
-				// if close button is clicked btn is undefined, so no reload window
-				if (btn === msg.restartIde) {
-					reloadWindow()
-				}
-			})
+		reloadWindow();
+		// vscode.window
+		// 	.showInformationMessage(msg.enabled, msg.restartIde)
+		// 	.then((btn) => {
+		// 		// if close button is clicked btn is undefined, so no reload window
+		// 		if (btn === msg.restartIde) {
+		// 		}
+		// 	})
 	}
 	function disabledRestart() {
-		vscode.window
-			.showInformationMessage(msg.disabled, msg.restartIde)
-			.then((btn) => {
-				if (btn === msg.restartIde) {
-					reloadWindow()
-				}
-			})
+		reloadWindow()
+		// vscode.window
+		// 	.showInformationMessage(msg.disabled, msg.restartIde)
+		// 	.then((btn) => {
+		// 		if (btn === msg.restartIde) {
+		// 		}
+		// 	})
 	}
 
 	const installCustomCSS = vscode.commands.registerCommand(
-		"extension.installCustomCSS",
+		"vccsilent.installCustomCSS",
 		cmdInstall
 	);
 	const uninstallCustomCSS = vscode.commands.registerCommand(
-		"extension.uninstallCustomCSS",
+		"vccsilent.uninstallCustomCSS",
 		cmdUninstall
 	);
 	const updateCustomCSS = vscode.commands.registerCommand(
-		"extension.updateCustomCSS",
+		"vccsilent.updateCustomCSS",
 		cmdReinstall
 	);
 
@@ -268,7 +268,7 @@ function activate(context) {
 	context.subscriptions.push(uninstallCustomCSS);
 	context.subscriptions.push(updateCustomCSS);
 
-	console.log("vscode-custom-css is active!");
+	console.log("vscode-custom-css-silent is active!");
 	console.log("Application directory", appDir);
 	console.log("Main HTML file", htmlFile);
 }

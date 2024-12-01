@@ -1,10 +1,8 @@
 exports.messages = {
 	admin: "Run VS Code with admin privileges so the changes can be applied.",
 	enabled:
-		"Custom CSS and JS enabled. Restart to take effect. " +
-		"If Code complains about it is corrupted, CLICK DON'T SHOW AGAIN. " +
-		"See README for more detail.",
-	disabled: "Custom CSS and JS disabled and reverted to default. Restart to take effect.",
+		"Custom CSS and JS enabled.\nRestart to take effect.",
+	disabled: "Custom CSS and JS disabled and reverted to default.\nRestart to take effect.",
 	already_disabled: "Custom CSS and JS already disabled.",
 	somethingWrong: "Something went wrong: ",
 	restartIde: "Restart Visual Studio Code",

@@ -1,4 +1,15 @@
-# Custom CSS and JS
+# FORKED EXTENSION !
+
+> (the base is provided by the good pal `be5invis` in this repo: [vscode-custom-css](https://raw.githubusercontent.com/be5invis/vscode-custom-css))
+
+> I've customized it for using in my own extension: `rtltextdocuments`
+
+---
+---
+
+👇🏽 The default readme that I did not write :)
+
+## Custom CSS and JS
 
 ### **SPECIAL NOTE: If Visual Studio Code complains about that it is corrupted, simply click “Don't show again”.**
 ### **NOTE: Every time after Visual Studio Code is updated, please re-enable Custom CSS.**

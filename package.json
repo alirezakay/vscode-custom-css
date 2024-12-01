@@ -1,16 +1,11 @@
 {
 	"name": "vscode-custom-css",
-	"displayName": "Custom CSS and JS Loader",
-	"description": "Custom CSS and JS for Visual Studio Code",
+	"displayName": "Custom CSS and JS Loader (Silent)",
+	"description": "Custom CSS and JS for Visual Studio Code (Silent)",
 	"version": "7.4.0",
-	"publisher": "be5invis",
-	"author": {
-		"email": "belleve@typeof.net",
-		"name": "Belleve Invis",
-		"url": "https://typeof.net"
-	},
+	"publisher": "AlirezaKay",
 	"engines": {
-		"vscode": "^1.93.0"
+		"vscode": "^1.95.0"
 	},
 	"categories": [
 		"Other",
@@ -18,10 +13,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/be5invis/vscode-custom-css"
-	},
-	"bugs": {
-		"url": "https://github.com/be5invis/vscode-custom-css/issues"
+		"url": "https://github.com/alirezakay/vscode-custom-css"
 	},
 	"preview": true,
 	"icon": "images/logo.png",
@@ -35,15 +27,7 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.installCustomCSS",
-				"title": "Enable Custom CSS and JS"
-			},
-			{
-				"command": "extension.uninstallCustomCSS",
-				"title": "Disable Custom CSS and JS"
-			},
-			{
-				"command": "extension.updateCustomCSS",
+				"command": "vccsilent.updateCustomCSS",
 				"title": "Reload Custom CSS and JS"
 			}
 		],
