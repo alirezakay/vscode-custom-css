@@ -1,7 +1,7 @@
 {
 	"name": "vscode-custom-css-silent",
 	"displayName": "Custom CSS and JS Loader (Silent)",
-	"description": "Custom CSS and JS for Visual Studio Code (Silent)",
+	"description": "Custom CSS and JS for Visual Studio Code - in silent mode",
 	"version": "7.4.0",
 	"publisher": "AlirezaKay",
 	"engines": {
@@ -23,23 +23,31 @@
 	"activationEvents": [
 		"*"
 	],
-	"main": "./src/extension",
+	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
+				"command": "vccsilent.installCustomCSS",
+				"title": "Enable Custom CSS and JS"
+			},
+			{
 				"command": "vccsilent.updateCustomCSS",
 				"title": "Reload Custom CSS and JS"
+			},
+			{
+				"command": "vccsilent.uninstallCustomCSS",
+				"title": "Disable Custom CSS and JS"
 			}
 		],
 		"configuration": {
 			"title": "Custom CSS/JS Configuration",
 			"properties": {
-				"vscode_custom_css.imports": {
+				"vscode_custom_css_silent.imports": {
 					"description": "Custom CSS/JS files, as an array of URLs, not file paths",
 					"type": "array",
 					"default": []
 				},
-				"vscode_custom_css.statusbar": {
+				"vscode_custom_css_silent.statusbar": {
 					"description": "Enable Status Indicator",
 					"type": "boolean",
 					"default": true
@@ -48,18 +56,32 @@
 		}
 	},
 	"devDependencies": {
-		"eslint": "^8.21.0",
-		"eslint-config-prettier": "^8.5.0"
+		"@types/mocha": "^2.2.48",
+		"@types/node": "^22.10.1",
+		"@types/node-fetch": "^2.6.12",
+		"@types/uuid": "^10.0.0",
+		"@types/vscode": "^1.86.0",
+		"@vscode/test-electron": "^2.4.1",
+		"@vscode/vsce": "^3.1.1",
+		"eslint-config-prettier": "^8.5.0",
+		"typescript": "^5.7.2"
 	},
 	"dependencies": {
 		"file-url": "^3.0.0",
 		"node-fetch": "^2.0.0",
+		"sudo-prompt": "^9.2.1",
+		"tmp": "^0.2.3",
 		"uuid": "^8.3.2"
 	},
 	"extensionKind": [
 		"ui"
 	],
 	"scripts": {
-		"vscode:prepublish": "npx -y rimraf node_modules && npm install --prod"
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "yarn run compile && yarn run lint",
+		"lint": "eslint src",
+		"test": "vscode-test"
 	}
 }

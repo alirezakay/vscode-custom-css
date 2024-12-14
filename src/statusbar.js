@@ -5,7 +5,7 @@
 		const e2 = document.querySelector(".right-items .__CUSTOM_CSS_JS_INDICATOR_CLS");
 		if (e1 && !e2) {
 			let e = document.createElement("div");
-			e.id = "be5invis.vscode-custom-css";
+			e.id = "alirezakay.vscode-custom-css-silent";
 			e.title = "Custom CSS and JS";
 			e.className = "statusbar-item right __CUSTOM_CSS_JS_INDICATOR_CLS";
 			{
@@ -14,7 +14,7 @@
 				a.className = 'statusbar-item-label';
 				{
 					const span = document.createElement("span");
-					span.className = "codicon codicon-paintcan";
+					span.className = "codicon codicon-sparkle-filled";
 					a.appendChild(span);
 				}
 				e.appendChild(a);

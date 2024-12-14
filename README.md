@@ -2,7 +2,9 @@
 
 > (the base is provided by the good pal `be5invis` in this repo: [vscode-custom-css](https://github.com/be5invis/vscode-custom-css))
 
-> I've customized it for using in my own extension: `rtltextdocuments`
+> I've customized it for using in **my own extension**: `rtltextdocuments`
+
+> You can use this extension as the silent (no annoying notifcation messages) version of the original custom css and js!
 
 ---
 ---
