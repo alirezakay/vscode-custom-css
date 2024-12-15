@@ -305,8 +305,6 @@ export async function activate(context: ExtensionContext) {
 				return new Promise(resolve => setTimeout(resolve, ms));
 			}
 			while (status === 'pending') {
-				console.log("kir");
-
 				await sleep(100);
 				status = await context.secrets.get('status') || "";
 				continue
